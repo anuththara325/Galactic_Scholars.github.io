@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <!-- Import Fontawesome -->
+  <script src="https://kit.fontawesome.com/ee2c6a13c7.js" crossorigin="anonymous"></script>
+  <link rel="icon" type="image/x-icon" href="./Images/logo.png">
+  <link rel="stylesheet" href="Footer.css" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="Milestone.css" />
+  <title>Galactic Scholars</title>
+</head>
+
+<body>
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light navbar-custom">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Galactic Scholars</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#Home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Introduction">Introduction</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Domain">Domain</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Milestones">Milestones</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Provide">What do we provide</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Documents">Documents</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Tools">Tools and Technologies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Achievements">Achievements</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Team">Team</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <script>
+    // Get all the nav links
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+  
+    // Function to remove active class from all nav links
+    function removeActiveClass() {
+      navLinks.forEach(nav => nav.classList.remove('active'));
+    }
+  
+    // Add click event listener to each link
+    navLinks.forEach(link => {
+      link.addEventListener('click', function () {
+        // Remove active class from all nav links
+        removeActiveClass();
+        // Add active class to the clicked link
+        this.classList.add('active');
+      });
+    });
+  
+    // Function to add active class based on scroll position
+    function setActiveLink() {
+      const sections = document.querySelectorAll('section'); // Select all sections
+      sections.forEach(section => {
+        const rect = section.getBoundingClientRect(); // Get the bounding rectangle of the section
+        if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+          // If the section is in the viewport, set the corresponding link as active
+          const id = section.getAttribute('id'); // Get the id of the section
+          removeActiveClass(); // Remove active class from all nav links
+          document.querySelector(`a[href="#${id}"]`).classList.add('active'); // Add active class to the current section's link
+        }
+      });
+    }
+  
+    // Add scroll event listener
+    window.addEventListener('scroll', setActiveLink);
+  </script>
+  
+
+<section id="Home">
+  <div class="section-body container">
+    <div class="row h-100 justify-content-center align-items-center">
+      <div class="text-center">
+        <img  style="margin-top: -90px;"  src="./Images/logo.png" class="img-fluid rounded" />
+        <p class="display-6" style="margin-top: -60px; color: black; font-weight: bold; font-size: 30px;">
+          UNVEILING THE SECRETS OF THE UNIVERSE'S GIANTS: <br /> SYMPHONY OF DATA UNRAVELS GALAXIES
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Section Two Component -->
+  <section id="Introduction" class="section-body section-2 h-100">
+    <header class="container h-100">
+      <div class="d-flex align-items-center justify-content-center h-100">
+        <div class="d-flex flex-column text-center">
+          <p class="display-2 fw-bolder title-top-bottom" style="color: #bf77f6;">Who are Galactic Scholars?</p>
+          <p class="display-6 custom-display-6" style="color: #bf77f6;">
+            Welcome to Galactic Scholars, a dedicated community of researchers, experts, and enthusiasts passionate about unraveling the mysteries of the universe. Our focus is on the study of galaxies, stars, and other celestial phenomena, aiming to deepen our understanding of the cosmos. Whether through collaborative research, groundbreaking discoveries, or fostering curiosity, Galactic Scholars strive to advance the field of astrophysics and share knowledge with the world. Join us in exploring the vast expanse of space and unlocking the secrets of the galaxies beyond our own.
+          </p>
+        </div>
+      </div>
+    </header>
+  </section>
+
+  <!-- Our Domain Component -->
+  <section id="Domain" class="section-body-3 section-3 section-top-bottom">
+    <header class="container">
+      <div class="d-flex align-items-center justify-content-center">
+        <div class="d-flex flex-column text-center">
+          <p class="display-3 fw-bolder title-top-bottom" >Our Domain</p>
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item section-2 accordion-section accordion-row">
+              <h2 class="accordion-header accordion-row" id="flush-headingOne">
+                <button class="accordion-button collapsed accordion-header-section accordion-row" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
+                  aria-controls="flush-collapseOne">
+                  <i class="fa-sharp fa-solid fa-book"></i> &nbsp; Background
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse accordion-row"
+                aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body accordion-row text-start">
+                  <i class="fa-solid fa-bars-staggered"></i> &nbsp;The analysis of galaxies using data-driven approaches has become essential in modern astrophysical research. With the increasing availability of large datasets from telescopes like the Hubble Space Telescope, Pan-STARRS, and Sloan Digital Sky Survey, astronomers are now able to classify galaxies, predict their properties, and understand their formation and evolution at an unprecedented scale. Traditional methods of analyzing these datasets are often overwhelmed by the sheer volume of information, and that's where machine learning (ML) and deep learning (DL) techniques play a critical role.
+
+                  AI-based methods, particularly in image processing, have allowed astronomers to enhance low-resolution galaxy images, detect globular clusters, and classify galaxies based on various properties like morphology, redshift, and brightness. These approaches not only automate the time-consuming tasks but also enable the identification of patterns and correlations that might otherwise be missed by human observers.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item section-2 accordion-section accordion-row">
+              <h2 class="accordion-header accordion-row" id="flush-headingTwo">
+                <button class="accordion-button collapsed accordion-header-section accordion-row" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                  aria-controls="flush-collapseTwo">
+                  <i class="fa-sharp fa-solid fa-arrows-left-right-to-line"></i> &nbsp; Research Gap
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse accordion-row"
+                aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body accordion-row text-start">
+                  <i class="fa-solid fa-bars-staggered"></i> &nbsp;The analysis of galaxies using data-driven approaches, particularly AI and machine learning, has revolutionized modern astrophysical research, but several challenges persist. Low-resolution images from telescopes often hinder detailed analysis, and while current models attempt to upscale these images, they struggle to maintain accuracy and fidelity. Traditional galaxy classification systems, such as Hubble's Tuning Fork, are inadequate for categorizing distant and morphologically ambiguous galaxies, necessitating more advanced machine learning models. Furthermore, identifying and analyzing globular clusters across different galaxies is a complex task with limitations in both traditional and AI-based methods, particularly in terms of precision and generalizability. Additionally, many AI models, particularly deep learning-based ones, function as black boxes, lacking transparency and interpretability, underscoring the need for explainable AI (XAI) techniques to enhance trust and provide clearer insights into model predictions. This research aims to address these gaps by improving image resolution, developing robust galaxy classification systems, enhancing globular cluster analysis, and integrating XAI methods for better transparency and reliability in astrophysical data analysis.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item section-2 accordion-section">
+              <h2 class="accordion-header" id="flush-headingThree accordion-row">
+                <button class="accordion-button collapsed accordion-header-section accordion-row" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false"
+                  aria-controls="flush-collapseThree">
+                  <i class="fa-sharp fa-solid fa-circle-exclamation"></i> &nbsp; Research Problems
+                </button>
+              </h2>
+              <div id="flush-collapseThree" class="accordion-collapse collapse accordion-row"
+                aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body accordion-row text-start">
+                  <p><i class="fa-solid fa-bars-staggered"></i> &nbsp;
+                 
+Current telescopic limitations hinder detailed analysis, requiring improved methods for image resolution and structure detection.
+
+                  </p>
+                  <p><i class="fa-solid fa-bars-staggered"></i> &nbsp;
+                  
+Traditional galaxy classification methods (e.g., Hubble's Tuning Fork) struggle with distant and ambiguous galaxies, necessitating advanced machine learning models.
+
+                  </p>
+                  <p><i class="fa-solid fa-bars-staggered"></i> &nbsp;
+                    Existing methods lack precision and generalizability in identifying and analyzing globular clusters across galaxies.
+
+                  </p>
+                  <p><i class="fa-solid fa-bars-staggered"></i> &nbsp;
+                   Deep learning models often operate as black boxes, creating a need for explainable AI techniques to improve trust and interpretability of predictions.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item section-2 accordion-section">
+              <h2 class="accordion-header" id="flush-headingFour">
+                <button class="accordion-button collapsed accordion-header-section accordion-row" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false"
+                  aria-controls="flush-collapseFour">
+                  <i class="fa-solid fa-bullseye"></i> &nbsp; Research Objectives
+                </button>
+              </h2>
+              <div id="flush-collapseFour" class="accordion-collapse collapse accordion-row"
+                aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body accordion-row text-start">
+                  <p><i class="fa-solid fa-bars-staggered"></i> &nbsp;
+                    Use neural networks (e.g., GANs) to upscale low-resolution galaxy images for enhanced morphology, substructure detection, and redshift estimation.
+
+                  </p>
+                  <p><i class="fa-solid fa-bars-staggered"></i> &nbsp;
+                    Develop machine learning models to classify galaxies, particularly distant and ambiguous ones, improving upon traditional methods like Hubble’s Tuning Fork.
+
+                  </p>
+                  <p><i class="fa-solid fa-bars-staggered"></i> &nbsp;
+                    Apply machine learning to analyze globular clusters, creating predictive models to better understand their distribution and properties.
+
+                  </p>
+                  <p><i class="fa-solid fa-bars-staggered"></i> &nbsp;
+                    Implement explainable AI techniques (SHAP, LIME) to increase transparency and trust in galaxy classification and globular cluster predictions.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </section>
+
+
+
+  <!-- Milestones Component -->
+  <section id="Milestones" class="section-body-3 section-2 section-top-bottom">
+    <header class="container">
+      <div class="d-flex align-items-center justify-content-center">
+        <div class="d-flex flex-column text-center">
+          <p class="display-3 fw-bolder title-top-bottom">Milestones</p>
+          <div class="container">
+            <div class="main-timeline">
+              <!-- start Project Topic Assessment section-->
+              <div class="timeline">
+                <div class="icon"></div>
+                <div class="date-content">
+                  <div class="date-outer">
+                    <span class="date">
+                      <span class="month">January</span>
+                      <span class="year">2024</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="timeline-content">
+                  <h5 class="title">
+                    Project Topic Assessment ( No marks allocated )
+                  </h5>
+                  <p class="description">
+                    Initial topic assessment document of the proposed research
+                    was submitted for evaluation. The submitted document
+                    included a brief overview on key aspects of the proposed
+                    research along with the research problem, research
+                    objectives, overall solution as well as member task
+                    breakdown.
+                  </p>
+                </div>
+              </div>
+              <!-- end Project Topic Assessment section-->
+
+              <!-- start Project Charter Submission section-->
+              <div class="timeline">
+                <div class="icon"></div>
+                <div class="date-content">
+                  <div class="date-outer">
+                    <span class="date">
+                      <span class="month">January</span>
+                      <span class="year">2024</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="timeline-content">
+                  <h5 class="title">
+                    Project Charter Submission ( No marks allocated )
+                  </h5>
+                  <p class="description">
+                    Once the topic was finalized, the project charter document
+                    was submitted for evaluation. This document also included
+                    a brief overview on key aspects of the proposed research
+                    along with the research problem, research objectives,
+                    overall solution as well as member task breakdown of the
+                    proposed research.
+                  </p>
+                </div>
+              </div>
+              <!-- end Project Charter Submission section-->
+
+              <!-- start Project Proposal Presentation section-->
+              <div class="timeline">
+                <div class="icon"></div>
+                <div class="date-content">
+                  <div class="date-outer">
+                    <span class="date">
+                      <span class="month">February</span>
+                      <span class="year">2024</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="timeline-content">
+                  <h5 class="title">
+                    Project Proposal Presentation ( Marks Allocation - 5% )
+                  </h5>
+                  <p class="description">
+                    Presented to a panel of judges in order to provide an
+                    overview of the proposed research.
+                  </p>
+                </div>
+              </div>
+              <!-- end Project Proposal Presentation section-->
+
+              <!-- start Project Proposal Report section-->
+              <div class="timeline">
+                <div class="icon"></div>
+                <div class="date-content">
+                  <div class="date-outer">
+                    <span class="date">
+                      <span class="month">February</span>
+                      <span class="year">2024</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="timeline-content">
+                  <h5 class="title">
+                    Project Proposal Report ( Marks Allocation - 7% )
+                  </h5>
+                  <p class="description">
+                    The submission of a report which provides an in-depth
+                    analysis pertaining to key aspects of the proposed
+                    research along with the research problem, objectives, as
+                    well as the overall proposed solution.
+                  </p>
+                </div>
+              </div>
+              <!-- end Project Proposal Report section-->
+
+              <!-- start Status Document 1 section-->
+              <div class="timeline">
+                <div class="icon"></div>
+                <div class="date-content">
+                  <div class="date-outer">
+                    <span class="date">
+                      <span class="month">May</span>
+                      <span class="year">2024</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="timeline-content">
+                  <h5 class="title">
+                    Status Document 1 ( Marks Allocation - 1% )
+                  </h5>
+                  <p class="description">
+                    The submission of a document that provides an overview of key tasks conducted by members during the
+                    implementation phase of the research.
+                  </p>
+                </div>
+              </div>
+              <!-- end Status Document 1 section-->
+
+              <!-- start Progress Presentation 1 section-->
+              <div class="timeline">
+                <div class="icon"></div>
+                <div class="date-content">
+                  <div class="date-outer">
+                    <span class="date">
+                      <span class="month">May</span>
+                      <span class="year">2024</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="timeline-content">
+                  <h5 class="title">
+                    Progress Presentation 1 ( Marks Allocation - 15% )
+                  </h5>
+                  <p class="description">
+                    Evaluation of 50% completion of the proposed solution by a panel of judges.
+                  </p>
+                </div>
+              </div>
+              <!-- end Progress Presentation 1 section-->
+
+              <!-- start Research Paper draft submission section-->
+              <div class="timeline">
+                <div class="icon"></div>
+                <div class="date-content">
+                  <div class="date-outer">
+                    <span class="date">
+                      <span class="month">June</span>
+                      <span class="year">2024</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="timeline-content">
+                  <h5 class="title">
+                    Research Paper draft submission ( Marks Allocation - 10% )
+                  </h5>
+                  <p class="description">
+                    Draft submission of the research paper submitted to the supervisor for evaluation.
+                  </p>
+                </div>
+              </div>
+              <!-- end Research Paper draft submission section-->
+              <!-- start Final Thesis Submission section-->
+              <div class="timeline">
+                <div class="icon"></div>
+                <div class="date-content">
+                  <div class="date-outer">
+                    <span class="date">
+                      <span class="month">August</span>
+                      <span class="year">2024</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="timeline-content">
+                  <h5 class="title">
+                    Final Thesis Submission ( Marks Allocation - 19% )
+                  </h5>
+                  <p class="description">
+                    Submission of the group and individual thesis documents for evaluation.
+                  </p>
+                </div>
+              </div>
+              <!-- end Final Thesis Submission section-->
+              <!-- start Progress Presentation 2 section-->
+              <div class="timeline">
+                <div class="icon"></div>
+                <div class="date-content">
+                  <div class="date-outer">
+                    <span class="date">
+                      <span class="month">September</span>
+                      <span class="year">2024</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="timeline-content">
+                  <h5 class="title">
+                    Progress Presentation 2 ( Marks Allocation - 18% )
+                  </h5>
+                  <p class="description">
+                    Evaluation of 90% completion of the proposed solution by a panel of judges.
+                  </p>
+                </div>
+              </div>
+              <!-- end Progress Presentation 2 section-->
+              <!-- start Final Thesis Submission section-->
+              <div class="timeline">
+                <div class="icon"></div>
+                <div class="date-content">
+                  <div class="date-outer">
+                    <span class="date">
+                      <span class="month">October</span>
+                      <span class="year">2024</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="timeline-content">
+                  <h5 class="title">
+                    Website Assessment ( Marks Allocation - 2% )
+                  </h5>
+                  <p class="description">
+                    Submission of research website for evaluation.
+                  </p>
+                </div>
+              </div>
+              <!-- end Final Thesis Submission section-->
+              <!-- start Progress Presentation 2 section-->
+              <div class="timeline">
+                <div class="icon"></div>
+                <div class="date-content">
+                  <div class="date-outer">
+                    <span class="date">
+                      <span class="month">November</span>
+                      <span class="year">2024</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="timeline-content">
+                  <h5 class="title">
+                    Log Book and Status Document 2 ( Marks Allocation - 4% )
+                  </h5>
+                  <p class="description">
+                    Submission of the research logbook and status document 2 which provides an overview of all key tasks
+                    conducted by members during the implementation phase of the research.
+                  </p>
+                </div>
+              </div>
+              <!-- end Progress Presentation 2 section-->
+              <!-- start Final Presentation and Viva section-->
+              <div class="timeline">
+                <div class="icon"></div>
+                <div class="date-content">
+                  <div class="date-outer">
+                    <span class="date">
+                      <span class="month">October</span>
+                      <span class="year">2024</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="timeline-content">
+                  <h5 class="title">
+                    Final Presentation and Viva ( Marks Allocation - 20% )
+                  </h5>
+                  <p class="description">
+                    Final evaluation of the completed product.
+                  </p>
+                </div>
+              </div>
+              <!-- end Final Presentation and Viva section-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </section>
+
+  <!-- What do we provide Component -->
+  <section id="Provide" class="section-3 section-body-3 section-top-bottom">
+    <header class="container">
+      <div class="d-flex align-items-center justify-content-center">
+        <div class="d-flex flex-column text-center">
+          <p class="display-2 fw-bolder title-top-bottom">What do we provide?</p>
+          <div class="row">
+            <!--Galaxy Prediction Engine-->
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3 d-flex align-items-stretch">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Galaxy Prediction Engine</h5>
+                  <br />
+                  <i class="fa-solid fa-server fa-2xl"></i>
+                  <br /><br />
+                  <p class="card-text">
+                    Dynamically predict galaxy types, redshift values, or star formation rates using machine learning. The model adjusts predictions based on updated astronomical observations, improving accuracy over time
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--Galaxy Categorization Model-->
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3 d-flex align-items-stretch">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Galaxy Categorization Model
+                  </h5>
+                  <br />
+                  <i class="fa-sharp fa-solid fa-database fa-2xl"></i>
+                  <br /><br />
+                  <p class="card-text">
+                    Utilize machine learning algorithms to classify galaxies into types such as spiral, elliptical, and irregular based on key features like morphology, brightness, and color. The model continuously refines classifications as new data becomes available, improving accuracy and insight into galactic formation and evolution.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--Globular Cluster Insights System-->
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3 d-flex align-items-stretch">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Globular Cluster Insights System
+                  </h5>
+                  <br />
+                  <i class="fa-solid fa-brain fa-2xl"></i>
+                  <br /><br />
+                  <p class="card-text">
+                    Apply clustering and classification algorithms and photometric analysis to detect and categorize globular clusters in galaxies. Use advanced machine learning techniques to assess their properties to provide deeper insights.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--Image Enhancement Enginet-->
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3 d-flex align-items-stretch">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Image Enhancement Engine
+                  </h5>
+                  <br />
+                  <i class="fa-solid fa-tv fa-2xl"></i>
+                  <br /><br />
+                  <p class="card-text">
+                    Leverage neural networks such as Generative Adversarial Networks (GANs) to upscale low-resolution galaxy images. This system enhances image clarity and detail, making it easier to identify faint astronomical objects and analyze galaxy structures with greater precision.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </section>
+
+  <!-- Documents Component -->
+  <section id="Documents" class="section-2 section-body-3 section-top-bottom">
+    <header class="container">
+      <div class="d-flex align-items-center justify-content-center">
+        <div class="d-flex flex-column text-center">
+          <p class="display-2 fw-bolder title-top-bottom">Documents</p>
+          <!--Project Proposals-->
+          <div class="row">
+            <p class="sub-heading-3">Project Proposal</p>
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3 d-flex align-items-stretch">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Proposal Presentation - Team</h5>
+                  <br />
+                  <i class="fa-solid fa-file-pdf fa-5x"></i>
+                  <br /><br />
+                  <a href="https://drive.google.com/file/d/1XHeT-S2JC_WdJsmR2F3GGuaIj8B5atu-/view?usp=sharing"
+                    target="_blank"><button class="btn btn-light">DOWNLOAD</button></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3 d-flex align-items-stretch">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Proposal Document - IT21029868</h5>
+                  <br />
+                  <i class="fa-solid fa-file-pdf fa-5x"></i>
+                  <br /><br />
+                  <a href="https://drive.google.com/file/d/14CIPAO9zzStIDm93juK-8wOHjV7W9ObW/view?usp=sharing"
+                    target="_blank"><button class="btn btn-light">DOWNLOAD</button></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3 d-flex align-items-stretch">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Proposal Document - IT20708276</h5>
+                  <br />
+                  <i class="fa-solid fa-file-pdf fa-5x"></i>
+                  <br /><br />
+                  <a href="https://drive.google.com/file/d/1nhG7UrTwVuZsCRI-Cjvcy00hDTmDpHh0/view?usp=sharing"
+                    target="_blank"><button class="btn btn-light">DOWNLOAD</button></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3 d-flex align-items-stretch">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Proposal Document - IT21064654</h5>
+                  <br />
+                  <i class="fa-solid fa-file-pdf fa-5x"></i>
+                  <br /><br />
+                  <a href="https://drive.google.com/file/d/1NE7wPQYmo6RplOpawbtm3jPz8fejOiMU/view?usp=sharing"
+                    target="_blank"><button class="btn btn-light">DOWNLOAD</button></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3 d-flex align-items-stretch">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Proposal Document - IT21088582</h5>
+                  <br />
+                  <i class="fa-solid fa-file-pdf fa-5x"></i>
+                  <br /><br />
+                  <a href="https://drive.google.com/file/d/1ihp8qQq64UEC4iI93uMF4MEYoSRMpKY0/view?usp=sharing"
+                    target="_blank"><button class="btn btn-light">DOWNLOAD</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Status Documents 01-->
+          <div class="row">
+            <p class="sub-heading-3">Status Document 01</p>
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3 ">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">IT21029868</h5>
+                  <br />
+                  <i class="fa-solid fa-file-pdf fa-5x"></i>
+                  <br /><br />
+                  <a href="https://drive.google.com/file/d/1xtbcQRi68q-TT05X8fORVDXQ_fqSE42F/view?usp=sharing"
+                    target="_blank"><button class="btn btn-light">DOWNLOAD</button></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3 ">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">IT20708276</h5>
+                  <br />
+                  <i class="fa-solid fa-file-pdf fa-5x"></i>
+                  <br /><br />
+                  <a href="https://drive.google.com/file/d/1bR33lHXFL4pCWKuDbYSHBTf9-64wgADD/view?usp=sharing"
+                    target="_blank"><button class="btn btn-light">DOWNLOAD</button></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3 ">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">IT21064654</h5>
+                  <br />
+                  <i class="fa-solid fa-file-pdf fa-5x"></i>
+                  <br /><br />
+                  <a href="https://drive.google.com/file/d/1WhOW-3D54E2IUbZ2ecUZDRb5vv74IBf8/view?usp=sharing"
+                    target="_blank"><button class="btn btn-light">DOWNLOAD</button></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3 ">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">IT21088582</h5>
+                  <br />
+                  <i class="fa-solid fa-file-pdf fa-5x"></i>
+                  <br /><br />
+                  <a href="https://drive.google.com/file/d/19x0GgCIIUfsfqhS4rO3o0eddgwTxyAl5/view?usp=sharing"
+                    target="_blank"><button class="btn btn-light">DOWNLOAD</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Progress Presentation 01-->
+          <div class="row">
+            <p class="sub-heading-3">Progress Presentation 01
+
+            </p>
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3 ">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Progress Presentation 01
+
+                  </h5>
+                  <br />
+                  <i class="fa-solid fa-file-pdf fa-5x"></i>
+                  <br /><br />
+                  <a href="https://drive.google.com/file/d/1EX3PAjljI18bTKR2iHoqOH5Bkisb8dAH/view?usp=sharing"
+                    target="_blank"><button class="btn btn-light">DOWNLOAD</button></a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!--Research Paper -->
+          <div class="row">
+            <p class="sub-heading-3">Research Paper</p>
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3 ">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Research Paper - IT21029868</h5>
+                  <br />
+                  <i class="fa-solid fa-file-pdf fa-5x"></i>
+                  <br /><br />
+                  <a href="https://drive.google.com/file/d/1sZNsWLRZJVe6MSTBB3FBS8CTg8J1Zr0_/view?usp=sharing"
+                    target="_blank"><button class="btn btn-light">DOWNLOAD</button></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3 ">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Research Paper - IT20708276</h5>
+                  <br />
+                  <i class="fa-solid fa-file-pdf fa-5x"></i>
+                  <br /><br />
+                  <a href="https://drive.google.com/file/d/1DUC-Wlf1fNXlII__adbStdKUaIoN2yyz/view?usp=sharing"
+                    target="_blank"><button class="btn btn-light">DOWNLOAD</button></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3 ">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Research Paper - IT21064654</h5>
+                  <br />
+                  <i class="fa-solid fa-file-pdf fa-5x"></i>
+                  <br /><br />
+                  <a href="https://drive.google.com/file/d/16P74dGxc8CHvFYoWR6g4_pgBSwvGyjZp/view?usp=sharing"
+                    target="_blank"><button class="btn btn-light">DOWNLOAD</button></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3 ">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Research Paper - IT21088582</h5>
+                  <br />
+                  <i class="fa-solid fa-file-pdf fa-5x"></i>
+                  <br /><br />
+                  <a href="https://drive.google.com/file/d/1-8rt2FedH6WrZSJTiMNYyVUyHKqeI23y/view?usp=sharing"
+                    target="_blank"><button class="btn btn-light">DOWNLOAD</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Progress Presentation 02-->
+          <div class="row">
+            <p class="sub-heading-3">Progress Presentation 02</p>
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3 ">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Progress Presentation 02</h5>
+                  <br />
+                  <i class="fa-solid fa-file-pdf fa-5x"></i>
+                  <br /><br />
+                  <a href="https://drive.google.com/file/d/1TPO4Rs-UxPQbjve09SPjPTZvkL5hHu5b/view?usp=sharing"
+                    target="_blank"><button class="btn btn-light">DOWNLOAD</button></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3 ">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Poster</h5>
+                  <br />
+                  <i class="fa-solid fa-file-pdf fa-5x"></i>
+                  <br /><br />
+                  <a href="https://drive.google.com/file/d/15ofqY40J4ubrS9X7bLOjXoMDnbgQcO_Z/view?usp=sharing"
+                    target="_blank"><button class="btn btn-light">DOWNLOAD</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Final Reports-->
+          <div class="row">
+            <p class="sub-heading-3">Final Reports </p>
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3 ">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Final Report - IT21029868</h5>
+                  <br />
+                  <i class="fa-solid fa-file-pdf fa-5x"></i>
+                  <br /><br />
+                  <a href="https://drive.google.com/file/d/17MGbRyRWL0NzpjgyuNOAOE28M8ANU_vj/view?usp=sharing"
+                    target="_blank"><button class="btn btn-light">DOWNLOAD</button></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3 ">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Final Report - IT20708276</h5>
+                  <br />
+                  <i class="fa-solid fa-file-pdf fa-5x"></i>
+                  <br /><br />
+                  <a href="https://drive.google.com/file/d/106HyTIX9Sy8qt4ljQcAzlIeGeqBNrD5r/view?usp=sharing"
+                    target="_blank"><button class="btn btn-light">DOWNLOAD</button></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3 ">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Final Report - IT21064654</h5>
+                  <br />
+                  <i class="fa-solid fa-file-pdf fa-5x"></i>
+                  <br /><br />
+                  <a href="https://drive.google.com/file/d/138SbJSOWn_FSXdlwINk-p__Dt2IHWa3B/view?usp=sharing"
+                    target="_blank"><button class="btn btn-light">DOWNLOAD</button></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3 ">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Final Report - IT21088582</h5>
+                  <br />
+                  <i class="fa-solid fa-file-pdf fa-5x"></i>
+                  <br /><br />
+                  <a href="https://drive.google.com/file/d/1L1mA1RHdopq0oAbwJ_8qbXwFzCgxv6GA/view?usp=sharing"
+                    target="_blank"><button class="btn btn-light">DOWNLOAD</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Project Registration Documents-->
+          <div class="row">
+            <p class="sub-heading-3">Project Registration Documents</p>
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3 ">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Topic Assessment
+
+                  </h5>
+                  <br />
+                  <i class="fa-solid fa-file-pdf fa-5x"></i>
+                  <br /><br />
+                  <a href="https://drive.google.com/file/d/1Axi-JTCR4YuF87quG557mMvZUvVP4LRa/view?usp=sharing"
+                    target="_blank"><button class="btn btn-light">DOWNLOAD</button></a>
+                </div>
+              </div>
+            </div>
+       
+          </div>
+    </header>
+  </section>
+
+  <!--Tools and Technologies Component -->
+  <section id="Tools" class="section-body-3  section-3 section-top-bottom">
+    <header class="container">
+      <div class="d-flex align-items-center justify-content-center">
+        <div class="d-flex flex-column text-center">
+          <p class="display-2 fw-bolder title-top-bottom">Tools and Technologies</p>
+          <div class="row">
+            <!--React-->
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Python</h5>
+                  <br />
+                  <i class="fa-brands fa-python fa-5x"></i>
+                  <br /><br />
+                </div>
+              </div>
+            </div>
+           <!-- Generative AI -->
+<div class="col-sm-12 col-md-4 col-lg-3 p-3">
+  <div class="card card-section">
+    <div class="card-body">
+      <h5 class="card-title">Generative AI</h5>
+      <br />
+      <i class="fa-solid fa-robot fa-5x"></i>
+      <br /><br />
+    </div>
+  </div>
+</div>
+           <!-- Astropy -->
+<div class="col-sm-12 col-md-4 col-lg-3 p-3">
+  <div class="card card-section">
+    <div class="card-body">
+      <h5 class="card-title">Astropy</h5>
+      <br />
+      <i class="fa-solid fa-meteor fa-5x"></i> <!-- Meteor icon for astronomy -->
+      <br /><br />
+    </div>
+  </div>
+</div>
+           <!-- TensorFlow -->
+<div class="col-sm-12 col-md-4 col-lg-3 p-3">
+  <div class="card card-section">
+    <div class="card-body">
+      <h5 class="card-title">TensorFlow</h5>
+      <br />
+      <i class="fa-solid fa-brain fa-5x"></i> <!-- Brain icon for AI and machine learning -->
+      <br /><br />
+    </div>
+  </div>
+</div>
+          <!-- PyTorch -->
+<div class="col-sm-12 col-md-4 col-lg-3 p-3">
+  <div class="card card-section">
+    <div class="card-body">
+      <h5 class="card-title">PyTorch</h5>
+      <br />
+      <i class="fa-solid fa-fire fa-5x"></i> <!-- Fire icon representing PyTorch's active development and features -->
+      <br /><br />
+    </div>
+  </div>
+</div>
+<!-- Google Colab -->
+<div class="col-sm-12 col-md-4 col-lg-3 p-3">
+  <div class="card card-section">
+    <div class="card-body">
+      <h5 class="card-title">Google Colab</h5>
+      <br />
+      <i class="fa-solid fa-laptop-code fa-5x"></i> <!-- Laptop code icon for coding environments -->
+      <br /><br />
+    </div>
+  </div>
+</div>
+<!-- Kaggle -->
+<div class="col-sm-12 col-md-4 col-lg-3 p-3">
+  <div class="card card-section">
+    <div class="card-body">
+      <h5 class="card-title">Kaggle</h5>
+      <br />
+      <i class="fa-brands fa-kaggle fa-5x"></i> <!-- Kaggle brand icon -->
+      <br /><br />
+    </div>
+  </div>
+</div>
+<!-- Matplotlib -->
+<div class="col-sm-12 col-md-4 col-lg-3 p-3">
+  <div class="card card-section">
+    <div class="card-body">
+      <h5 class="card-title">Matplotlib</h5>
+      <br />
+      <i class="fa-solid fa-chart-bar fa-5x"></i> <!-- Bar chart icon for data visualization -->
+      <br /><br />
+    </div>
+  </div>
+</div>
+    </header>
+  </section>
+
+  <!--Achievements Component -->
+  <section id="Achievements" class="section-body-3 section-2 section-top-bottom">
+    <header class="container">
+      <div class="d-flex align-items-center justify-content-center">
+        <div class="d-flex flex-column text-center">
+          <p class="display-2 fw-bolder title-top-bottom">Achievements</p>
+          <div class="row">
+            <!--13th ICCCNT 2022-->
+            <div class="col-12">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h2 class="card-title">6th ICAC 2024</h2>
+                  <br />
+                  <i class="fa-sharp fa-solid fa-trophy fa-5x"></i>
+                  <br /><br />
+                  <p class="card-text">
+                    Two of our research papers have been accepted to the 6th International Conference on Advancements in Computing (ICAC) 2024 (h5-index: 14)
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </header>
+  </section>
+
+  <!--Team Component -->
+  <section id="Team" class="section-body-3 section-3 section-top-bottom">
+    <header class="container">
+      <div class="d-flex align-items-center justify-content-center">
+        <div class="d-flex flex-column text-center">
+          <p class="display-2 fw-bolder title-top-bottom">Team</p>
+          <div class="row">
+            <!--Samadhi Rathnayake-->
+            <div class="col-lg-3 p-3 d-flex align-items-stretch">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title"> Mr. Samadhi Rathnayake <br /> ( Supervisor)</h5>
+                  <br />
+                  <img src="./Images/Team/samadhi.jpeg" class="team-member-image img-fluid rounded" />
+                  <br /><br />
+                  <a href="https://www.linkedin.com/in/samadhi-chathuranga-rathnayake/" class="social-icons" target="_blank"><i
+                      class="fa-brands fa-linkedin fa-2x"></i></a>
+                </div>
+              </div>
+            </div>
+            <!--Dr. Kapila Dissanayaka-->
+            <div class="col-lg-3 p-3 d-flex align-items-stretch">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Dr. Kapila Dissanayaka  <br /> ( Co-Supervisor )</h5>
+                  <br />
+                  <img src="./Images/Team/Kapila.png" class="team-member-image img-fluid rounded" />
+                  <br /><br />
+                  <a href="https://www.linkedin.com/in/kapila-d-dissanayaka/" class="social-icons"
+                    target="_blank"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+                </div>
+              </div>
+            </div>
+            <!--Bhanuka Dimuthu-->
+            <div class="col-lg-3 p-3 d-flex align-items-stretch">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Mr. Bhanuka Dimuthu <br /> ( External-Supervisor )</h5>
+                  <br />
+                  <img src="./Images/Team/Banuka.png" class="team-member-image img-fluid rounded" />
+                  <br /><br />
+                  <a href="https://www.linkedin.com/in/banukadimuthu/" class="social-icons"
+                    target="_blank"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+                </div>
+              </div>
+            </div>
+            <!--Anuththara Divyanjalie -->
+            <div class="col-lg-3 p-3 d-flex align-items-stretch">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Anuththara Divyanjalie   (Lead)</h5>
+                  <br />
+                  <img src="./Images/Team/Anuththara.jpeg" class="team-member-image img-fluid rounded" />
+                  <br /><br />
+                  <a href="https://www.linkedin.com/in/anuththara-divyanjalie-628765213/" class="social-icons"
+                    target="_blank"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+                </div>
+              </div>
+            </div>
+            <!--Udani Navaratne-->
+            <div class="col-lg-3 p-3 d-flex align-items-stretch">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Udani Navaratne</h5>
+                  <br />
+                  <img src="./Images/Team/udani.jpeg" class="team-member-image img-fluid rounded" />
+                  <br /><br />
+                  <a href="https://www.linkedin.com/in/udani-navaratne-612384255/" class="social-icons"
+                    target="_blank"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+                </div>
+              </div>
+            </div>
+            <!--Thrinith Fernando-->
+            <div class="col-lg-3 p-3 d-flex align-items-stretch">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Thrinith Fernando</h5>
+                  <br />
+                  <img src="./Images/Team/Thrinith.jpeg" class="team-member-image img-fluid rounded" />
+                  <br /><br />
+                  <a href="https://www.linkedin.com/in/thrinith-shevon-7349941bb/" class="social-icons" target="_blank"><i
+                      class="fa-brands fa-linkedin fa-2x"></i></a>
+                </div>
+              </div>
+            </div>
+            <!--Amasha Nishadi-->
+            <div class="col-lg-3 p-3 d-flex align-items-stretch">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Amasha Nishadi</h5>
+                  <br />
+                  <img src="./Images/Team/Amasha.jpeg" class="team-member-image img-fluid rounded" />
+                  <br /><br />
+                  <a href="http://linkedin.com/in/amasha-elvitigala-887325259" class="social-icons"
+                    target="_blank"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </section>
+
+  <!--Contact Component -->
+  <section id="Contact" class="section-body-3 section-2 section-top-bottom">
+    <header class="container">
+      <div class="d-flex align-items-center justify-content-center">
+        <div class="d-flex flex-column text-center">
+          <p class="display-2 fw-bolder title-top-bottom">Contact</p>
+          <div class="row contactus">
+            <!--Contact-->
+            <div class="col-12">
+              <div class="card card-section">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <form>
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Email address</label>
+                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label">Inqury</label>
+                          <input type="text" class="form-control" id="exampleInputPassword1">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="background-color: purple; border-color: purple;">Submit</button>
+                      </form>
+                    </div>
+                    <div class="col-md-6">
+                      <p class="card-text">please contact us for any clarification</p>
+                      <p class="card-text">
+                        year4researchteamsliit@gmail.com
+                      </p>
+                      <p class="card-text">
+                        +94 xx xxx xxxx
+                      </p>
+                                 </div>
+    
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-4 flex-shrink-0 section-top-bottom">
+    <div class="container py-4">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6">
+          <h5 class="h1 text-white">Galactic Scholars</h5>
+          <p class="small text-muted">
+            UNVEILING THE SECRETS OF THE UNIVERSE'S GIANTS: SYMPHONY OF DATA UNRAVELS GALAXIES
+          </p>
+          <p class="small text-muted mb-0">
+            &copy; Copyrights. All rights reserved.
+          </p>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h5 class="text-white mb-3">Quick links</h5>
+          <ul class="list-unstyled text-muted">
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#Introduction">Introduction</a></li>
+            <li><a href="#Domain">Domain</a></li>
+            <li><a href="#Milestones">Milestones</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h5 class="text-white mb-3">Quick links</h5>
+          <ul class="list-unstyled text-muted">
+            <li><a href="#Documents">Documents</a></li>
+            <li><a href="#Tools">Tools</a></li>
+            <li><a href="#Team">Team</a></li>
+            <li><a href="#Contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h5 class="text-white mb-3">Newsletter</h5>
+          <p class="small text-muted">
+            Subscribe out newsletter for more information
+          </p>
+          <form action="#">
+            <div class="input-group mb-3">
+              <input class="form-control" type="text" placeholder="Recipient's username"
+                aria-label="Recipient's username" aria-describedby="button-addon2" />
+              <button class="btn btn-primary" id="button-addon2" type="button" style="background-color: purple; border-color: purple;">
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
